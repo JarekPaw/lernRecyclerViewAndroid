@@ -3,6 +3,7 @@ package com.example.contacts
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.adapter_layout.view.*
@@ -26,7 +27,8 @@ class MyAdapter: RecyclerView.Adapter<MyViewHolder>(){
     }
 
     override fun getItemCount(): Int {
-        return DataBase.contactList.size  //zamiast dynamicznej iliści mozna tez zwrócić np. 3
+        return contactList.size
+ //       return DataBase.contactList.size  //zamiast dynamicznej iliści mozna tez zwrócić np. 3
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
@@ -35,10 +37,14 @@ class MyAdapter: RecyclerView.Adapter<MyViewHolder>(){
         var name = holder.view.tv_name
         var number: TextView = holder.view.tv_no
         var email: TextView = holder.view.tv_email
+       // var image: ImageView = holder.view.image_contact
 // teraz w tych textView trzeba ustawić teksty. position będzie się inkrementował
-        name.setText(DataBase.contactList[position])
-        number.setText(DataBase.contactNumbersList[position])
-        email.setText(DataBase.contactEmailList[position])
+       // name.setText(DataBase.contactList[position])
+        //number.setText(DataBase.contactNumbersList[position])
+        //email.setText(DataBase.contactEmailList[position])
+        //image.setImageResource(DataBase.contactImage[position]) to nie jest poprawne!
+
+        name.setText(contactList[position])
 
     }
 
