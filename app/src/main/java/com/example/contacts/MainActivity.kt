@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-// to co poniżej to moj pomysł może nie być najlepszy
+// to co poniżej to moj pomysł ktory może nie być najlepszy
         recycler_view.layoutManager = LinearLayoutManager(this)
         recycler_view.adapter = MyAdapter()
 

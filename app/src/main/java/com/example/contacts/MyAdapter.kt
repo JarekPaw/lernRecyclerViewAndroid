@@ -26,7 +26,7 @@ class MyAdapter: RecyclerView.Adapter<MyViewHolder>(){
     }
 
     override fun getItemCount(): Int {
-        return DataBase.contactList.size  //zamiast dynamicznej iliści mozna tez zwrócić np 3
+        return DataBase.contactList.size  //zamiast dynamicznej iliści mozna tez zwrócić np. 3
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
